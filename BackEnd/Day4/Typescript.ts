@@ -408,3 +408,66 @@ const inf=new info("rasool",9381048461)//CREATE THE OBJECT FOR INFO
 
 const ADDRESS=new address("hyd",500032,inf,)//CREATE OBJECT FOR ADDRESS INJECT INFO IN THE ADDRESS OBJECT HER
 console.log(ADDRESS.get());//CALL THE METHOD HER
+
+
+
+//exercise
+
+interface USER{     //user interface 
+    name:string;
+    address:string;
+    email:string;
+    login():void; //login method 
+    logout():void; //logit method 
+
+}
+class Normaluser implements USER{   //user details implement in normaluser
+    
+    constructor(public name:string,public email:string,public address:string){ 
+        //constructor we pass the props here 
+
+    }
+    login(): void { //implement method from USER INTERFACE
+        console.log(`${this.name} is logined...`)
+        
+    }
+    logout(): void {  //implement method from USER INTERFACE
+        console.log(`${this.name} is logout....`)
+        
+    }
+    viewprofile():string{   //details of normal usser
+
+        return`details of the user is name:${this.name},email: ${this.email}, address:${this.address}`;
+    }
+}
+
+class Admin implements USER{   //it is admin class commonfunctionality or login ,logout
+    constructor(public name:string,public email:string,public address:string,public Nouser:USER){
+      //HERE NORMAL USER INJECT IN THE USER CLASS 
+      //ADMIN CAN DELETED THE USER
+    }
+    login(): void {    // ADMIN CAN LOGINNED
+        console.log(`${this.name} is logined...`)
+      
+    }
+    logout(): void {  // ADMIN CAN LOGOUT
+        console.log(`${this.name} is logined...`)    
+    }
+    deleteduser(){    //ADMIN CAN BY NORMAL USER
+        return `Admin ${this.name} delete by THE  user IS... ${this.Nouser.name}`
+    }// THE ADMIN NAME NORMAL USER NAME ALSO VISIBLE HER WHICH ADMIN CAN DELETED LIKE THIS
+    
+}
+const NORMALUSER=new Normaluser("rasool","nayab@gmail.com","pune")
+//CREATE OBJECT FOR THE NORMAL USER
+NORMALUSER.login(); // LOGIN METHOD CALLING
+NORMALUSER.logout();//LOGOUT CALLING
+console.log(NORMALUSER.viewprofile()); //NORMAL USER DETIALS
+
+const ADMIN=new Admin("raja","raja@gmail.com","hyderbad",NORMALUSER);
+//CREATE OBJECT For THE admin
+ADMIN.login(); //admin login
+ADMIN.logout();//admin logout
+console.log(ADMIN.deleteduser()); //delete user by admin
+
+
