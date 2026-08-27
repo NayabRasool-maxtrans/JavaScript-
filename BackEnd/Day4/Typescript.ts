@@ -390,7 +390,7 @@ class info{  //CALSS
 
     }
 
-}
+}     
 
 class address{   //CLASS 
     addr:string;
