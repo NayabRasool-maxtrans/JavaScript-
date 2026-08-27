@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>HELLO</H1>
+    <h1 id="ras"></h1>
+    <h1 id="ra"></h1>
+
+    <script>
+        let a=10;
+        const b=20;
+        console.log(a);
+        console.log(b);
+        //object
+        let obj={type:"company",location:"hyd"}
+        console.log("object data",obj);
+        console.log(obj.location)
+        document.getElementById("ras").innerHTML=obj.type;
+        //iterating
+        console.log("iterating...")
+        for(let j in obj){
+
+            console.log(obj[j])
+        }
+        //array is stores all types of data 
+        let arr =[1,10,2,8];
+        arr=[1,10,2,8,{name:"rasool",location:"hyd"}]
+        console.log(arr)
+
+        // functions
+        let greet=function(name="rasool"){
+            console.log("hello!")
+            return (`hello ${name}`);
+        }
+        greet("raja");
+        document.getElementById("ra").innerHTML=greet();
+        //date
+        let date=new Date();
+        console.log(date)
+        console.log(date.getDay())
+         document.getElementById("ra").innerHTML=date;
+
+         //regexp
+         let regx = /\W/g;
+         let str="hello, world! 123_456@"
+         let match=str.match(regx);
+         let replace=str.replace(regx,"")
+         console.log(replace);
+         let split=str.split(regx)
+         console.log(split);
+        //operators
+         let add=function(i,j){
+            return i+j;
+            console.log("add",i+j)  
+         }
+         add(3,2);
+         //bitwise and OR
+         let age=20;
+         let idproof=true;
+         if(age=>18 && idproof==true && age<=100){
+            console.log("eligible for vote..")
+         }
+         else{
+            console.log("not eligible..")
+         }
+         //OR
+         let isLoggedin=false;
+         if(!isLoggedin){
+            console.log("Login!")
+         }
+         else{
+            console.log("welcome back....")
+         }
+         //ternory opertor
+         let status=age>18?"adult":"minor"
+         let votestatus= (age=>18)?"eligible":"not eligible"
+         console.log(votestatus)
+
+         //increment post
+         let x=10;
+         let y=x++;
+         console.log(x+"post inc values",y)
+
+         let p=10;
+         let q=++p;
+         console.log(p+"pre incremt values",q)
+//in operator
+         const data={
+            name:"rasool",
+            location:"hyd",
+            state:"TG"
+         }
+
+         console.log("name" in data);
+
+        // chaining operator
+        const getdata={name:"rasool",address:{city:"hyd",pincode:500038}}
+        console.log(getdata.address?.village)//undefined
+        console.log(getdata.address?.city)//hyd
+
+
+        //conditions if ,if else ,nested if else,ternary,switch
+
+        const day="monday";
+
+        switch(day){
+            case "monday":
+                console.log("start of the work week...");
+                break;
+
+            case "friday":
+                console.log("weekend is almost is ther..")
+                break;
+            default :
+                console.log("regular weekend...")
+
+        }
+//loops for,while ,do while ,
+for(let i=0;i<3;i++){
+    console.log(`iteration number:${i}`)
+}
+
+const fruits=["apple","banana","mango"]
+
+for(let i of fruits){
+    console.log(i)
+}
+
+
+//functions
+  //named function its own name
+  function mul(a,b){
+    return a+b;
+
+  }
+  console.log(mul(2,3))
+  // function expressions
+  const ind=function(c,d){
+    return a*b;
+  }
+  console.log(a*b)
+
+  //arrow function
+  const div=n=>n*3;
+  console.log(div(3))
+
+   function num(n,call){
+    return call(n);
+  }
+function fact(n){
+    if( n==0) return 1;
+    else
+        return n*fact(n-1);
+}
+console.log(fact(5))
+
+//array
+
+let array=[1,"rasool","raja",{name:"ras",value:"RAJA"}]
+console.log(array[0]);
+let last=array[array.length-1];
+console.log(last);
+//modify
+array[2]="rasool2"
+console.log(array)
+array.push("67");//add the elemnts in end of the array
+array.unshift("thaya")//add the elemnts in begining of  the array
+console.log(array)
+console.log(array.pop())//remove elements from last
+console.log(array.shift())//remove elements first
+console.log(array.length)//length of array
+array.forEach((item)=>{
+    console.log("for each",item)
+
+})
+
+
+//largest element in the array
+
+
+function largest(large){
+    let max =large[0];
+    for(let d=1;d < large.length;d++){
+        if(large[d]>max) max = large[d];
+        console.log(max,d)
+
+        return max;
+     
+    }   
+}
+let large=[1,29,34,76]
+console.log(largest(large))
+
+
+
+//object 
+const obd={name:"vamshi",contact:95276141};
+console.log("accessing",obd.name)
+obd.name="rahul";
+console.log("updating",obd.name)
+obd.color="white";
+console.log("inserting",obd)
+delete obd.name
+console.log(obd)
+console.log("length of the obj",Object.keys(obd).length)
+
+//destructuring
+let user={name:"ravi", company:"wood"};
+let {name,company}=user;
+console.log(name,company)
+let {name:username,company:usercomp}=user;
+console.log(username)
+
+//destructuring 
+ let h=[1,383,3267,3289];
+ let o=[7,73,87,90,533]
+ let v={address:"hyd",pin:"39808"}
+ let f={address:"hyd",pin:"39808"}
+
+ let spread=[...h,...o]
+ console.log(spread)
+ console.log(Math.max(...h))
+
+
+ //string literals 
+ const price=10;
+ const tax=0.05
+ console.log(`the total price of the is product is ${price*(tax+1)}`)
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
