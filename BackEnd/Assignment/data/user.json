@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "rasool",
+    "age": 20,
+    "email": "rasool@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 2,
+    "name": "manikanta",
+    "age": 20,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 4,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 5,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 6,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 7,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 8,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 9,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  },
+  {
+    "id": 10,
+    "name": "manikanta setti",
+    "age": 25,
+    "email": "mani7@gmail.com",
+    "address": "hyderbad"
+  }
+]
