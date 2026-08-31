@@ -16,10 +16,10 @@ export async function Routes(req:IncomingMessage,res:ServerResponse) {
         return getallusers(req,res);
     }
     
-    //get by id
+    //get by id matchthe url pattern
     if(method==="GET" && match){
-        const id=Number(match[1]);
-        return getbyid(req,res,id)
+        const id=Number(match[1]); //match[1]=number id
+        return getbyid(req,res,id)//call the getbyid
     }
 // new user
 if(method==="POST"&& url==="/users"){
@@ -27,13 +27,13 @@ if(method==="POST"&& url==="/users"){
 }
 //delete
 if(method==="DELETE"&& match){
-    const id=Number(match[1]);
+    const id=Number(match[1]);//match[1]=number id
     
     return deletebyid(req,res,id);
 }
 //update
 if(method==="PUT" && match){
-    const id=Number(match[1])
+    const id=Number(match[1])//match[1]=number id
 
     return upadting(req,res,id)
 }

@@ -22,7 +22,7 @@ for(let i=0;i<large.length-1;i++){
 }
 console.log("duplicate values",dup)
 
-//convert array into object using spread opertor
+//convert array into object using spread opertseconor
 let obj={...large}
 console.log(obj)
 
@@ -48,7 +48,7 @@ return first;
 
 },{})
 
-console.log(groupuser)
+console.log("group user by role",groupuser)
 
 
 //active user
@@ -121,12 +121,14 @@ function counter(){
 let increment=counter();
 console.log(increment());
 
-//higher order
+//higher order and call back  function
 
-function fun(){
+
+function fun(){ //this is callback function 
     console.log("higher order function...")
 }
 
+//higer order function
 function fun2(action,name)     //takes another function as a arg 
 {
     action();
@@ -247,10 +249,11 @@ function pizza(){
    
   return "";
     
-}/*
+}
 
 function Drinks(){
     console.log("Drink order")
+    pizza();
   return "" ;
 }
 async function fetchdata(){
@@ -258,13 +261,13 @@ async function fetchdata(){
     const drinks= await Drinks();
 
 
-return [drinks];
+return drinks;
 
 }
 fetchdata()
 
 
-*/
+
 
 //try catch
 // 

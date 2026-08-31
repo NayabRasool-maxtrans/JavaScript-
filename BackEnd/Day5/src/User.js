@@ -28,14 +28,14 @@ const Server=http.createServer((req,res)=>{
     const pathname=url.pathname
     //method from request 
     const method=req.method
-    console.log(pathname,method)
+    console.log("pathname",pathname,"method",method)
 
     //get all users 
 
     if(method ==="GET" && pathname==="/users"){  //HERE METHOD GET PATHNAME IS users
         res.statusCode=200; //status if 
         res.end(JSON.stringify(user));//return data in json format
-        return ;
+        return;
     }
 
 // GET USER BY ID 
@@ -47,11 +47,11 @@ const Server=http.createServer((req,res)=>{
         if(!ID){
             res.statusCode=404;
             res.end(JSON.stringify({message:"User not found"}))
-            return ;
+            return;
         }
         res.statusCode=200;
-        res.end(JSON.stringify(ID));
-        return ;
+        const result=res.end(JSON.stringify(ID));
+        return result;
 
 
     }

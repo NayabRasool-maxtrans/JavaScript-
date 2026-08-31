@@ -78,6 +78,7 @@ class adding implements arth{
     x:number;
     y:number;
     z:number;
+    
     constructor(x:number,y:number,z:number){
         this.x=x;
         this.y=y;
@@ -113,6 +114,7 @@ console.log(`Username is ${data.Username} ,email is ${data.email}`)
 //type aliases
 
 type userd=number;
+
 
 let usering:userd=10;
 console.log(usering)
