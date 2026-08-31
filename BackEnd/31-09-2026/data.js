@@ -131,6 +131,27 @@ Create table user(id int,name varchar(100) NOT NULL,email varchar(100)NOT NULL U
 
 Synx:
 Create table users(id BIGINT PRIMARY KEY AUTO_INCREMENT,name varchar(100) NOT NULL,email varchar(100)NOT NULL UNIQUE ,password varchar(100) NOT NULL,created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP);
+// create table orders(orderid int primary KEY,ordernumber int not null,
+// id int ,constraint fk_person FOREIGN KEY(id) REFERENCES person(id));
+
+
+
+
+using foreign key
+.......................
+select * from orders;
+
+//
+
+
+insert into person(name,age) values ("rasool",25),("raja",26),("ramesh",30)
+alter table orders modify orderid int auto_increment;
+select * from orders;
+
+insert into orders(ordernumber,id) values (1908,1),(3673,2),(2638,1);
+
+select person.name ,orders.id,orders.ordernumber from person  join orders  on person.id=orders.id
+
 
 
 
