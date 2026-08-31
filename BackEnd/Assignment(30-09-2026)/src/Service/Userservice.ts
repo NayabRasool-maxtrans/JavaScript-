@@ -12,6 +12,7 @@ console.log(process.cwd());
 
 
 console.log("Reading file:", filePath);
+
 //file path Reading file: D:\JavaScript\BackEnd\Assignment\data\user.json
 
 //we have read it takes sometime that why we use the async function
