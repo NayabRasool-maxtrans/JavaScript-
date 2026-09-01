@@ -69,7 +69,7 @@ Create table user(id int,name varchar(100),email varchar(100),password varchar(1
 
 >alter table:
 
-   > alter table user add phonenumber varchar(15);   //add the column
+  > alter table user add phonenumber varchar(15);   //add the column
   >alter table user drop column phonenumber     //drop the column
  >alter table  user modify column name varchar(100) not null; //modify  the column  datatype here 
 >truncate table user            // completely remove table information 
