@@ -208,4 +208,79 @@ select sum(price) from products;
 
 
 
+
+EXERCISE
+..........
+
+#users
+select * from users; #1,3,5
+
+#projects
+
+//CREATE THE TABLE for PROJECTS
+create table projects(id int primary key auto_increment,projectname varchar(100) not null,user_id bigint ,
+foreign key (user_id) references users(id) );
+
+select * from projects;
+
+insert into projects(projectname,user_id) values ('E-Commerce Projet',1)
+,('Bank Project ',5) ,('Crm project ',3);
+
+//CREATE THE TABLE for TASKS
+create table tasks(id bigint primary key auto_increment,title varchar(100) not null,
+status varchar(20) not null,due_date DATE,project_id int not null,
+foreign key (project_id) references projects(id) );
+
+select * from tasks;
+
+insert into tasks(title,status,due_date,project_id) 
+values ('create login api','completed','2026-09-28',1),
+('create login api','pending','2026-08-28',1)
+,('create login api','pending','2026-09-28',2) 
+,('create login api','inprogress','2026-10-01',3),
+('create authentication','inprogress','2026-10-01',1);
+
+insert into tasks(title,status,due_date,project_id)
+values ('create login api','pending','2026-08-28',1)
+
+select * from tasks
+
+#get all users
+
+select * from users;
+
+#find user by email;
+select * from users where email='nayabrasool@gmil.com'
+
+#get users project 
+
+select * from projects where user_id in (1,3,5);
+
+#get project tasks
+
+select * from tasks where project_id=1;
+
+## count tasks by status
+select status,count(*) as task_count  from tasks group by status
+
+#find overdue tasks
+select * from tasks where due_date <= curdate() and status !='completed'
+
+#pagination
+
+select * from users order by id limit 10 offset 0;
+
+#search user by name 
+
+select * from users where name like 'm%'; #starting with m  
+select * from users where name like '_%' #starting with any letter
+
+
+
+
+
+
+
+
+
 */

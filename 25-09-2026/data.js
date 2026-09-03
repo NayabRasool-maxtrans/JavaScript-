@@ -1,6 +1,6 @@
 
 
-let large=[29,34,76,76,27,36,99,29]
+let large=[29,34,76,76,27,36,99,29,120]
 let max=large[0];
 
 for(let i of large){
@@ -11,6 +11,10 @@ for(let i of large){
 
 }
 console.log("largest number...",max)
+//using reduce
+let maximum=large.reduce((acc,value)=>{return value>acc?value:acc})
+console.log("using reduce maximum",maximum)
+
 
 //duplicate values
 let dup=[];
@@ -265,6 +269,21 @@ return drinks;
 
 }
 fetchdata()
+
+function time(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            
+            resolve(console.log("helo"))
+        },2000)
+    })
+}
+
+async function timer() {
+   return await time();
+    
+}
+timer();
 
 
 
